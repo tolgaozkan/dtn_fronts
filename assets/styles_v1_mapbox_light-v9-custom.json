@@ -84,7 +84,7 @@
             "type": "vector"
         }
     },
-    "sprite": "https://raw.githubusercontent.com/tolgaozkan/dtn_fronts/master/assets/sprite",
+    "sprite": "https://raw.githack.com/tolgaozkan/dtn_fronts/master/assets/sprite",
     "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
     "layers": [
         {
