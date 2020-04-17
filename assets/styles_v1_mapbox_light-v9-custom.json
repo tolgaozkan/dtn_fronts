@@ -84,7 +84,7 @@
             "type": "vector"
         }
     },
-    "sprite": "http://127.0.0.1:8080/assets/sprite",
+    "sprite": "https://raw.githubusercontent.com/tolgaozkan/dtn_fronts/master/assets/sprite",
     "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
     "layers": [
         {
