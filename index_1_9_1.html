@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Mapbox</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet' />
+
+
+</head>
+
+<body>
+
+    <h3>1.9.1</h3>
+
+    <div id='map' style='width: 1440px; height: 810px;'></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidG9sZ2FvemthbiIsImEiOiJjaXVzY3o4eGQwMDF1MnpvMjdmeDJjemV5In0.p6AVcrNDOLj4eVT6wyuMKg';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'http://127.0.0.1:8080/assets/styles_v1_mapbox_light-v9-custom.json'
+        });
+
+        map.on('load', function () {
+            map.addSource('route', {
+                'type': 'geojson',
+                'data': {
+                    'type': 'Feature',
+                    'properties': {},
+                    'geometry': {
+                        'type': 'LineString',
+                        'coordinates': [
+                            [
+                                7.6025390625,
+                                52.48947038534306
+                            ],
+                            [
+                                11.195068359374998,
+                                52.496159531097106
+                            ]
+                        ]
+                    }
+                }
+            });
+            map.addLayer({
+                'id': 'route',
+                'type': 'line',
+                'source': 'route',
+                'paint': {
+                    'line-pattern': 'front-cold-left',
+                    'line-width': 26,
+                },
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
